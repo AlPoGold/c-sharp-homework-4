@@ -19,19 +19,28 @@
 
 // 9012 -> 12
 
-Console.Write("Please, enter the number: ");
-int number = int.Parse(Console.ReadLine()!);
-int sum = 0;
-for(int i = number; i>0; i/=10)
-{
-    int digit = i%10;
-    sum+=digit;
+// Console.Write("Please, enter the number: ");
+// int number = int.Parse(Console.ReadLine()!);
+// int sum = 0;
+// for(int i = number; i>0; i/=10)
+// {
+//     int digit = i%10;
+//     sum+=digit;
     
-}
-Console.WriteLine($"Summary of digits in {number} equals {sum}");
+// }
+// Console.WriteLine($"Summary of digits in {number} equals {sum}");
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 
 // 6, 1, 33 -> [6, 1, 33]
+
+void printArray(int[] array)
+{
+    foreach(int elem in array) Console.Write(elem + " ");
+}
+
+int[] myArray = new int[8];
+for(int i=0;i< myArray.Length; i++) myArray[i] = new Random().Next(0, 100);
+printArray(myArray);
